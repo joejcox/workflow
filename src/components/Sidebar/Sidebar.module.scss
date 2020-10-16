@@ -4,14 +4,13 @@
   background-color: #00b4ff;
   height: 100%;
   transform: translateX(-100%);
+  padding: 1rem;
 }
 
 .sidebar_container {
   display: flex;
   flex-direction: column;
   height: 100%;
-  padding: 1rem;
-  width: 100%;
 }
 
 .sidebar_top {
@@ -24,7 +23,7 @@
 
 @media screen and (min-width: 768px) {
   .sidebar {
-    width: 200px;
+    width: 250px;
     transform: translate(0);
   }
 }
