@@ -1,0 +1,52 @@
+.user_information {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.user_avatar {
+  width: 40px;
+  height: 40px;
+  background: deepskyblue;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 1rem;
+}
+
+.user_avatar__image {
+  width: 100%;
+  object-fit: cover;
+}
+
+.user_name {
+  transition: color 0.2s ease;
+  color: rgb(95, 95, 95);
+  margin-right: 1rem;
+}
+
+.user_information:hover .user_name {
+  color: black;
+}
+.user_information:hover .user_down_arrow svg,
+.user_information:hover .user_down_arrow svg {
+  fill: black;
+}
+
+.user_down_arrow,
+.user_up_arrow {
+  display: flex;
+  align-items: center;
+
+  svg {
+    transition: fill 0.2s ease;
+    width: 0.5rem;
+    fill: rgb(95, 95, 95);
+  }
+}
+
+.user_down_arrow svg {
+  margin-top: 0.25rem;
+}
+.user_up_arrow svg {
+  margin-top: 0.15rem;
+}
