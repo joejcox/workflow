@@ -8,11 +8,18 @@ const Logo = ({ slim }) => {
     <section className={styles.sidebar_logo}>
       <a href="/">
         {slim ? (
-          <img
-            className={styles.sidebar_logo__slim}
-            src={LogoSlim}
-            alt="Webfactory logo"
-          />
+          <>
+            <img
+              className={styles.sidebar_logo__slim}
+              src={LogoSlim}
+              alt="Webfactory logo"
+            />
+            <img
+              className={`${styles.sidebar_logo__wide} ${styles.hidden}`}
+              src={LogoImage}
+              alt="Webfactory Logo"
+            />
+          </>
         ) : (
           <img
             className={styles.sidebar_logo__wide}
