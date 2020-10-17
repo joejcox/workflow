@@ -1,10 +1,11 @@
 import React from "react";
 import styles from "./SidebarLink.module.scss";
 
-const SidebarLink = ({ children, text }) => {
+const SidebarLink = ({ children, text, slim }) => {
   return (
     <a href="/" className={styles.sidebar_link}>
-      {children} <span className={styles.sidebar_link__text}>{text}</span>
+      {children}{" "}
+      {slim ? null : <span className={styles.sidebar_link__text}>{text}</span>}
     </a>
   );
 };

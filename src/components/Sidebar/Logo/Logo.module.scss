@@ -1,8 +1,11 @@
 .sidebar_logo {
   margin-bottom: 1rem;
   text-align: center;
-  img {
+  .sidebar_logo__wide {
     width: 200px;
     max-width: 100%;
+  }
+  .sidebar_logo__slim {
+    width: 30px;
   }
 }

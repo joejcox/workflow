@@ -8,38 +8,38 @@ import { IoMdWarning } from "react-icons/io";
 import { CgLogOut } from "react-icons/cg";
 import SidebarLink from "../SidebarLink/SidebarLink";
 
-export const SidebarNavTop = () => {
+export const SidebarNavTop = ({ slim }) => {
   return (
     <section className="sidebar_navigation">
-      <SidebarLink text="Add Account">
+      <SidebarLink text="Add Account" slim={slim}>
         <HiUserAdd />
       </SidebarLink>
-      <SidebarLink text="Event Feed">
+      <SidebarLink text="Event Feed" slim={slim}>
         <BiRss />
       </SidebarLink>
-      <SidebarLink text="Reports">
+      <SidebarLink text="Reports" slim={slim}>
         <AiOutlineAreaChart />
       </SidebarLink>
-      <SidebarLink text="Big Screen">
+      <SidebarLink text="Big Screen" slim={slim}>
         <BiDesktop />
       </SidebarLink>
-      <SidebarLink text="Meetings">
+      <SidebarLink text="Meetings" slim={slim}>
         <GiRoundTable />
       </SidebarLink>
-      <SidebarLink text="Team Members">
+      <SidebarLink text="Team Members" slim={slim}>
         <TiGroup />
       </SidebarLink>
     </section>
   );
 };
 
-export const SidebarNavBottom = () => {
+export const SidebarNavBottom = ({ slim }) => {
   return (
     <section className="sidebar_navigation">
-      <SidebarLink text="Report Issue">
+      <SidebarLink text="Report Issue" slim={slim}>
         <IoMdWarning />
       </SidebarLink>
-      <SidebarLink text="Log Out">
+      <SidebarLink text="Log Out" slim={slim}>
         <CgLogOut />
       </SidebarLink>
     </section>

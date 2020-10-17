@@ -1,5 +1,5 @@
 .sidebar {
-  transition: 0.4s ease;
+  transition: 0.2s ease;
   width: 100%;
   background-color: #00b4ff;
   height: 100%;
@@ -25,5 +25,33 @@
   .sidebar {
     width: 250px;
     transform: translate(0);
+
+    .toggle_menu {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 1rem;
+      cursor: pointer;
+
+      svg {
+        transition: 0.3s ease;
+        fill: white;
+      }
+    }
+
+    &.slim {
+      width: 50px;
+
+      .sidebar_container {
+        align-items: center;
+      }
+
+      .toggle_menu {
+        justify-content: center;
+
+        svg {
+          transform: rotate(180deg);
+        }
+      }
+    }
   }
 }
