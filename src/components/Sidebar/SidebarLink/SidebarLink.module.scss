@@ -9,9 +9,23 @@
   align-items: center;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 
-  .sidebar_link__text {
-    display: inline-block;
-    margin-left: 1rem;
+  svg {
+    min-width: 15px;
+  }
+
+  &.sidebar_link__slim {
+    justify-content: center;
+  }
+
+  .sidebar_link__text_container {
+    max-height: 20px;
+    overflow: hidden;
+    width: 100%;
+
+    .sidebar_link__text {
+      display: inline-block;
+      margin-left: 1rem;
+    }
   }
 
   &:hover {
