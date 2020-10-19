@@ -1,9 +1,26 @@
 .site_header {
-  padding: 1rem 0;
+  padding: 0.5rem 0;
+  background: #00b4ff;
 }
 
 .site_header__container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.site_header__logo {
+  max-width: 40px;
+  margin-right: 1rem;
+}
+
+@media screen and (min-width: 896px) {
+  .site_header {
+    background: transparent;
+    padding: 1rem 0;
+  }
+
+  .site_header__logo {
+    display: none;
+  }
 }

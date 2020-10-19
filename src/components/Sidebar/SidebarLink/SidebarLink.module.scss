@@ -1,7 +1,6 @@
 .sidebar_link {
   transition: background-color 0.2s ease;
-  display: block;
-  text-align: left;
+  text-align: center;
   color: white;
   padding: 0.75rem 0.5rem;
   text-decoration: none;
@@ -13,22 +12,33 @@
     min-width: 15px;
   }
 
-  &.sidebar_link__slim {
-    justify-content: center;
-  }
-
   .sidebar_link__text_container {
-    max-height: 20px;
-    overflow: hidden;
-    width: 100%;
+    width: auto;
 
     .sidebar_link__text {
-      display: inline-block;
       margin-left: 1rem;
     }
   }
+}
 
-  &:hover {
-    background-color: lighten(#00b4ff, 5%);
+@media screen and (min-width: 896px) {
+  .sidebar_link {
+    transition: background-color 0.2s ease;
+    text-align: left;
+    align-items: flex-end;
+
+    &.sidebar_link__slim {
+      justify-content: center;
+    }
+
+    .sidebar_link__text_container {
+      max-height: 20px;
+      overflow: hidden;
+      width: 100%;
+    }
+
+    &:hover {
+      background-color: lighten(#00b4ff, 5%);
+    }
   }
 }

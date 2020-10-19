@@ -1,10 +1,16 @@
 .sidebar {
-  transition: 0.2s cubic-bezier(0.76, 0, 0.24, 1);
   width: 100%;
   background-color: #00b4ff;
   height: 100%;
-  transform: translateX(-100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  // transform: translateX(-100%);
   padding: 1rem;
+
+  .toggle_menu {
+    display: none;
+  }
 }
 
 .sidebar_container {
@@ -21,11 +27,13 @@
   padding: 1rem 0;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 896px) {
   .sidebar {
+    transition: 0.2s cubic-bezier(0.76, 0, 0.24, 1);
     width: 250px;
     transform: translate(0);
     overflow: hidden;
+    position: sticky;
 
     .toggle_menu {
       display: flex;
@@ -40,6 +48,7 @@
     }
 
     &.slim {
+      transition: none;
       width: 50px;
 
       .sidebar_container {
@@ -50,6 +59,7 @@
         justify-content: center;
 
         svg {
+          transition: none;
           transform: rotate(180deg);
         }
       }

@@ -5,7 +5,7 @@ import { SidebarNavTop, SidebarNavBottom } from "./SidebarNav/SidebarNav";
 import styles from "./Sidebar.module.scss";
 
 const Sidebar = () => {
-  const [slim, setSlim] = useState(true);
+  const [slim, setSlim] = useState(false);
 
   const toggleSidebar = () => {
     setSlim(!slim);
