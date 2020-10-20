@@ -1,15 +1,11 @@
 .sidebar_logo {
-  margin: -0.25rem 0 1rem 3rem;
+  margin: -0.35rem 0 1rem 3rem;
   opacity: 0;
 
   &.open {
-    transition: 0.2s ease;
+    transition: opacity 0.2s ease;
     transition-delay: 0.2s;
     opacity: 1;
-  }
-
-  .sidebar_logo__wide {
-    width: 200px;
   }
 }
 
@@ -19,9 +15,14 @@
     margin: 0 0 1rem;
     text-align: center;
     opacity: 1;
+    width: 100%;
+
+    .sidebar_logo__wide {
+      max-width: 200px;
+    }
 
     .sidebar_logo__slim {
-      width: 40px;
+      max-width: 40px;
     }
   }
 

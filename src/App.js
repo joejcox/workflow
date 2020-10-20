@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Helmet from "react-helmet";
 import Sidebar from "./components/Sidebar/Sidebar";
+import "./App.global.scss";
 import styles from "./App.module.scss";
 import Main from "./components/Main/Main";
 
