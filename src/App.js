@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Helmet from "react-helmet";
 import Sidebar from "./components/Sidebar/Sidebar";
-import "./App.scss";
+import styles from "./App.module.scss";
 import Main from "./components/Main/Main";
 
 const App = () => {
@@ -12,7 +12,7 @@ const App = () => {
   };
 
   return (
-    <div className="wrapper">
+    <div className={`${styles.wrapper} ${isOpen ? styles.nav_open : ""}`}>
       <Helmet>
         <title>Workflow</title>
       </Helmet>
