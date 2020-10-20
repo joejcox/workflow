@@ -3,7 +3,7 @@ import Search from "./Search/Search";
 import Hamburger from "../Header/Hamburger/Hamburger";
 import User from "./User/User";
 import styles from "./Header.module.scss";
-import Logo from "../../assets/images/wflogosmall.png";
+import Logo from "../../assets/images/wfsmall.webp";
 
 const Header = ({ menuIsOpen, toggle }) => {
   return (

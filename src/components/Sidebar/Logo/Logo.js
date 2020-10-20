@@ -1,6 +1,6 @@
 import React from "react";
 import LogoImage from "../../../assets/images/wflogo.webp";
-import LogoSlim from "../../../assets/images/wflogosmall.png";
+import LogoSlim from "../../../assets/images/wfsmall.webp";
 import styles from "./Logo.module.scss";
 
 const Logo = ({ slim, menuIsOpen }) => {
