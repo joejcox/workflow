@@ -4,12 +4,12 @@ import LogoImage from "../../../assets/images/wflogo.webp";
 import LogoSlim from "../../../assets/images/wfsmall.webp";
 import styles from "./Logo.module.scss";
 
-const Logo = ({ slim, menuIsOpen }) => {
+const Logo = ({ slim, menuIsOpen, click }) => {
   return (
     <section
       className={`${styles.sidebar_logo} ${menuIsOpen ? styles.open : ""}`}
     >
-      <Link to="/">
+      <Link to="/" onClick={click}>
         {slim ? (
           <>
             <img

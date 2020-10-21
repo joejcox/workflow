@@ -4,7 +4,7 @@ import { FaArrowLeft } from "react-icons/fa";
 import { SidebarNavTop, SidebarNavBottom } from "./SidebarNav/SidebarNav";
 import styles from "./Sidebar.module.scss";
 
-const Sidebar = ({ menuIsOpen }) => {
+const Sidebar = ({ menuIsOpen, toggle }) => {
   const [slim, setSlim] = useState(false);
 
   const toggleSidebar = () => {
@@ -22,11 +22,11 @@ const Sidebar = ({ menuIsOpen }) => {
           <div className={styles.toggle_menu} onClick={() => toggleSidebar()}>
             <FaArrowLeft />
           </div>
-          <Logo slim={slim} menuIsOpen={menuIsOpen} />
-          <SidebarNavTop slim={slim} />
+          <Logo slim={slim} menuIsOpen={menuIsOpen} click={toggle} />
+          <SidebarNavTop slim={slim} toggle={toggle} />
         </div>
         <div className={styles.sidebar_bottom}>
-          <SidebarNavBottom slim={slim} />
+          <SidebarNavBottom slim={slim} toggle={toggle} />
         </div>
       </div>
     </aside>

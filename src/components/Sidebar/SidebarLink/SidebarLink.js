@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./SidebarLink.module.scss";
 
-const SidebarLink = ({ children, text, slim }) => {
+const SidebarLink = ({ children, text, slim, click }) => {
   const slug = text.replace(/\s/g, "-").toLowerCase();
   return (
     <Link
@@ -10,6 +10,7 @@ const SidebarLink = ({ children, text, slim }) => {
       className={`${styles.sidebar_link} ${
         slim ? styles.sidebar_link__slim : ""
       }`}
+      onClick={click}
     >
       {children}
       {slim ? null : (
