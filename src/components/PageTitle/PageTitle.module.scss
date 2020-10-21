@@ -1,0 +1,28 @@
+.page_title__container {
+  margin-bottom: 1rem;
+  padding: 0 0.5rem;
+}
+
+.page_title {
+  position: relative;
+  font-weight: 300;
+  font-size: 1.5rem;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+
+  &::before {
+    position: absolute;
+    background: #00b4ff;
+    content: "";
+    left: 0;
+    bottom: 0;
+    height: 2.5px;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 896px) {
+  .page_title {
+    font-size: 2rem;
+  }
+}

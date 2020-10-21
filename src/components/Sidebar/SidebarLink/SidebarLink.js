@@ -1,10 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from "./SidebarLink.module.scss";
 
 const SidebarLink = ({ children, text, slim }) => {
+  const slug = text.replace(/\s/g, "-").toLowerCase();
   return (
-    <a
-      href="/"
+    <Link
+      to={`/${slug}`}
       className={`${styles.sidebar_link} ${
         slim ? styles.sidebar_link__slim : ""
       }`}
@@ -15,7 +17,7 @@ const SidebarLink = ({ children, text, slim }) => {
           <span className={styles.sidebar_link__text}>{text}</span>
         </p>
       )}
-    </a>
+    </Link>
   );
 };
 
