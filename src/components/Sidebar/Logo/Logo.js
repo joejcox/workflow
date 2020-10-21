@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import LogoImage from "../../../assets/images/wflogo.webp";
-import LogoSlim from "../../../assets/images/wfsmall.webp";
+import LogoImage from "assets/images/wflogo.webp";
+import LogoSlim from "assets/images/wfsmall.webp";
 import styles from "./Logo.module.scss";
 
 const Logo = ({ slim, menuIsOpen, click }) => {

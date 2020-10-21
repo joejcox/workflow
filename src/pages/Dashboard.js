@@ -1,6 +1,6 @@
 import React from "react";
-import PageTitle from "../../components/PageTitle/PageTitle";
-import Stats from "../../page-components/Dashboard/Stats/Stats";
+import PageTitle from "components/PageTitle/PageTitle";
+import Stats from "page-components/Dashboard/Stats/Stats";
 
 const Dashboard = ({ title }) => {
   return (

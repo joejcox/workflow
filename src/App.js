@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import { Helmet, HelmetProvider } from "react-helmet-async";
-import Sidebar from "./components/Sidebar/Sidebar";
+import Sidebar from "components/Sidebar/Sidebar";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.global.scss";
 import styles from "./App.module.scss";
-import Main from "./components/Main/Main";
+import Main from "components/Main/Main";
 
 // pages
-import Dashboard from "./pages/Dashboard/Dashboard";
-import AddAccount from "./pages/AddAccount/AddAccount";
-import ReportsPage from "./pages/Reports/ReportsPage";
+import Dashboard from "pages/Dashboard";
+import AddAccount from "pages/AddAccount";
+import ReportsPage from "pages/ReportsPage";
 
 const App = () => {
   const [isOpen, setOpen] = useState(false);

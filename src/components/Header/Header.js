@@ -1,9 +1,9 @@
 import React from "react";
 import Search from "./Search/Search";
-import Hamburger from "../Header/Hamburger/Hamburger";
+import Hamburger from "components/Header/Hamburger/Hamburger";
 import User from "./User/User";
 import styles from "./Header.module.scss";
-import Logo from "../../assets/images/wfsmall.webp";
+import Logo from "assets/images/wfsmall.webp";
 
 const Header = ({ menuIsOpen, toggle }) => {
   return (
