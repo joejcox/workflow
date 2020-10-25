@@ -37,9 +37,9 @@ const Tasks = () => {
   const getDaysDue = (days) => {
     const { days_due, overdue } = days;
     if (overdue === true) {
-      return `${days_due} days overdue`;
+      return `${Math.abs(days_due)} days overdue`;
     } else if (days_due === 0) {
-      return "Due Today";
+      return "Today";
     } else if (days_due === 1) {
       return `${days_due} day`;
     } else if (days_due > 1) {
@@ -72,23 +72,30 @@ const Tasks = () => {
       <h3 className={styles.task_heading}>Tasks: {taskTab.activeTask}</h3>
       <section className={styles.tasks_list}>
         {tasksData
-          .sort((a, b) => {
-            return a.days.days_due - b.days.days_due;
-          })
-          .filter((task) => {
-            return taskTab.activeTask === "All"
+          .sort((a, b) => a.days.days_due - b.days.days_due)
+          .filter((task) =>
+            taskTab.activeTask === "All"
               ? true
-              : task.type === taskTab.activeTask;
-          })
-          .map(({ customer_id, account_name, days }) => {
-            return (
-              <TaskItem
-                key={customer_id}
-                name={account_name}
-                days={getDaysDue(days)}
-              />
-            );
-          })}
+              : task.type === taskTab.activeTask
+          )
+          .map(
+            ({
+              customer_id,
+              account_name,
+              days,
+              days: { days_due, overdue },
+            }) => {
+              return (
+                <TaskItem
+                  key={customer_id}
+                  name={account_name}
+                  days={getDaysDue(days)}
+                  overdue={overdue}
+                  daysDue={days_due}
+                />
+              );
+            }
+          )}
       </section>
     </>
   );

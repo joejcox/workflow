@@ -30,7 +30,7 @@
     "account_name": "Tiny Rebel",
     "customer_id": 4,
     "days": {
-      "days_due": 7,
+      "days_due": -7,
       "overdue": true
     },
     "type": "Domains"
@@ -57,7 +57,7 @@
     "account_name": "Snack 'n' Go",
     "customer_id": 7,
     "days": {
-      "days_due": 2,
+      "days_due": -2,
       "overdue": true
     },
     "type": "Quotes"
