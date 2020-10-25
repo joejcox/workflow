@@ -1,28 +1,62 @@
 .task {
   position: relative;
   display: flex;
-  align-items: center;
+  align-items: stretch;
   padding: 0.5rem 0.5rem 0.5rem 1rem;
-  background: #edfaff;
-  border: 1px solid #c6efff;
+  background: lighten(#00b4ff, 46%);
+  border: 1px solid lighten(#00b4ff, 35%);
   margin-bottom: 0.25rem;
 
   .task_name {
     flex: 1;
     text-decoration: none;
     color: darken(#00b4ff, 25%);
+    display: flex;
+    align-items: center;
 
     &:hover {
       color: #00b4ff;
     }
   }
 
+  &.overdue {
+    background: lighten(red, 47%);
+    border: 1px solid lighten(red, 42%);
+
+    .task_name {
+      flex: 1;
+      text-decoration: none;
+      color: darken(red, 25%);
+
+      &:hover {
+        color: red;
+      }
+    }
+  }
+
+  &.today {
+    background: lighten(orange, 47%);
+    border: 1px solid lighten(orange, 32%);
+
+    .task_name {
+      flex: 1;
+      text-decoration: none;
+      color: darken(orange, 25%);
+
+      &:hover {
+        color: orange;
+      }
+    }
+  }
+
   .task_days {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     padding: 0.5rem 1rem;
     background: #00b4ff;
     color: white;
     border-radius: 2px;
+    display: flex;
+    align-items: center;
 
     &.task_days__overdue {
       background: red;

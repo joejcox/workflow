@@ -45,6 +45,7 @@ const Tasks = () => {
     const { days_due, overdue } = days;
     if (overdue === true) {
       return `${Math.abs(days_due)} days overdue`;
+      // return Math.abs(days_due);
     } else if (days_due === 0) {
       return "Today";
     } else if (days_due === 1) {
@@ -55,6 +56,15 @@ const Tasks = () => {
       return "Error in switch statement";
     }
   };
+
+  // const getDaysDue = (days) => {
+  //   const { days_due, overdue } = days;
+  //   if (overdue === true) {
+  //     return Math.abs(days_due);
+  //   } else {
+  //     return days_due;
+  //   }
+  // };
 
   return (
     <article className="tasks">

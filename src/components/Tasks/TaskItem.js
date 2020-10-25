@@ -5,7 +5,13 @@ import styles from "./TaskItem.module.scss";
 
 const TaskItem = ({ name, days, daysDue, overdue }) => {
   return (
-    <article className={styles.task}>
+    <article
+      className={`
+    ${styles.task} 
+    ${daysDue === 0 ? `${styles.today}` : ""} 
+    ${overdue === true ? `${styles.overdue}` : ""}
+    `}
+    >
       <Link to="/" className={styles.task_name}>
         {name}
       </Link>
