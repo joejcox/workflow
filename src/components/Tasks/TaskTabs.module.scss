@@ -56,6 +56,7 @@
       }
 
       &.task_tab__active .num_tasks {
+        transition-delay: 0.2s;
         background: white;
         color: #00b4ff;
       }
