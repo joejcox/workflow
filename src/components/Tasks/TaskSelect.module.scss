@@ -1,0 +1,15 @@
+.task_options {
+  margin-top: 1rem;
+  padding: 0 0.25rem;
+
+  .task_select {
+    padding: 1rem;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 896px) {
+  .task_options {
+    display: none;
+  }
+}

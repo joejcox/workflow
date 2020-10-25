@@ -11,12 +11,8 @@ const Header = ({ menuIsOpen, toggle }) => {
     <header className={styles.site_header}>
       <div className={`container ${styles.site_header__container}`}>
         <Hamburger menuIsOpen={menuIsOpen} toggle={toggle} />
-        <Link to="/">
-          <img
-            className={styles.site_header__logo}
-            src={Logo}
-            alt="Webfactory Logo"
-          />
+        <Link to="/" className={styles.site_header__logo}>
+          <img src={Logo} alt="Webfactory Logo" />
         </Link>
         <Search />
         <User />

@@ -19,9 +19,13 @@ const Sidebar = ({ menuIsOpen, toggle }) => {
     >
       <div className={styles.sidebar_container}>
         <div className={styles.sidebar_top}>
-          <div className={styles.toggle_menu} onClick={() => toggleSidebar()}>
+          <span
+            className={styles.toggle_menu}
+            title={slim ? "Open" : "Close"}
+            onClick={() => toggleSidebar()}
+          >
             <FaArrowLeft />
-          </div>
+          </span>
           <Logo slim={slim} menuIsOpen={menuIsOpen} click={toggle} />
           <SidebarNavTop slim={slim} toggle={toggle} />
         </div>

@@ -8,7 +8,9 @@ const Dashboard = ({ title }) => {
     <>
       <PageTitle>{title}</PageTitle>
       <Stats />
-      <Tasks />
+      <section className="panels">
+        <Tasks />
+      </section>
     </>
   );
 };

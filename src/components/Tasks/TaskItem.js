@@ -1,11 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { MdModeEdit, MdDeleteForever } from "react-icons/md";
 import styles from "./TaskItem.module.scss";
 
 const TaskItem = ({ name, days, daysDue, overdue }) => {
   return (
     <article className={styles.task}>
-      <span className={styles.task_name}>{name}</span>
+      <Link to="/" className={styles.task_name}>
+        {name}
+      </Link>
 
       <span
         className={`${styles.task_days} ${

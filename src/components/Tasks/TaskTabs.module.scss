@@ -39,6 +39,26 @@
         background: transparent;
         color: white;
       }
+
+      .num_tasks {
+        transition: 0.1s ease;
+        background: #00b4ff;
+        color: white;
+        border-radius: 50%;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 15px;
+        height: 15px;
+        font-size: 0.6rem;
+        margin-left: 0.25rem;
+        pointer-events: none;
+      }
+
+      &.task_tab__active .num_tasks {
+        background: white;
+        color: #00b4ff;
+      }
     }
   }
 }

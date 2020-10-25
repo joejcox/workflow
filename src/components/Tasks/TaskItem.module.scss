@@ -1,10 +1,20 @@
 .task {
+  position: relative;
   display: flex;
   align-items: center;
-  padding: 0.5rem 0.25rem;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  background: #edfaff;
+  border: 1px solid #c6efff;
+  margin-bottom: 0.25rem;
 
   .task_name {
     flex: 1;
+    text-decoration: none;
+    color: darken(#00b4ff, 25%);
+
+    &:hover {
+      color: #00b4ff;
+    }
   }
 
   .task_days {
@@ -12,20 +22,14 @@
     padding: 0.5rem 1rem;
     background: #00b4ff;
     color: white;
-    // border: 1px solid #00b4ff;
-    // color: #00b4ff;
     border-radius: 2px;
 
     &.task_days__overdue {
       background: red;
-      //   color: red;
-      //   border-color: red;
     }
 
     &.task_days__today {
       background: orange;
-      //   color: orange;
-      //   border-color: orange;
     }
   }
 

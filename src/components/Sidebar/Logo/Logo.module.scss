@@ -1,9 +1,14 @@
 .sidebar_logo {
-  margin: -0.25rem 0 1rem 3rem;
+  margin: -0.15rem 0 1rem 3rem;
   opacity: 0;
 
   .sidebar_logo__wide {
-    max-width: 180px;
+    display: block;
+    width: 180px;
+
+    img {
+      width: 100%;
+    }
   }
 
   &.open {
@@ -22,15 +27,25 @@
     width: 100%;
 
     .sidebar_logo__wide {
-      max-width: 200px;
+      transition: transform 0.2s ease;
+      transform: translateX(10px);
+      width: 200px;
     }
 
     .sidebar_logo__slim {
-      max-width: 40px;
+      width: 40px;
     }
-  }
 
-  .hidden {
-    display: none;
+    .sidebar_logo__slim,
+    .sidebar_logo__wide {
+      img {
+        object-fit: cover;
+        width: 100%;
+      }
+    }
+
+    .hidden {
+      display: none;
+    }
   }
 }

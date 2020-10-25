@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import SectionHeading from "components/SectionHeading/SectionHeading";
+import TaskSelect from "./TaskSelect";
 import TaskTabs from "./TaskTabs";
 import TaskItem from "./TaskItem";
 import styles from "./Tasks.module.scss";
@@ -20,11 +21,11 @@ const Tasks = () => {
   ];
 
   useEffect(() => {
-    let activeBar;
+    const activeBar = document.querySelector(".active_bar");
+    const active = document.querySelector(".active_btn");
     if (size) {
-      activeBar = document.querySelector(".active_bar");
-      activeBar.style.width = `${size.width}px`;
-      activeBar.style.transform = `translate(${size.left}px, 0)`;
+      activeBar.style.width = `${active.offsetWidth}px`;
+      activeBar.style.transform = `translate(${active.offsetLeft}px, ${active.offsetTop}px)`;
     }
   });
 
@@ -34,6 +35,10 @@ const Tasks = () => {
     const activeBar = document.querySelector(".active_bar");
     activeBar.style.width = `${e.target.offsetWidth}px`;
     activeBar.style.transform = `translate(${e.target.offsetLeft}px, ${e.target.offsetTop}px)`;
+  };
+
+  const changeActive = (e) => {
+    setTaskTab({ activeTask: e.target.value });
   };
 
   const getDaysDue = (days) => {
@@ -52,12 +57,14 @@ const Tasks = () => {
   };
 
   return (
-    <section className="tasks">
+    <article className="tasks">
       <TaskTabs
         taskTypes={taskTypes}
         click={setActive}
         activeTask={taskTab.activeTask}
+        data={tasksData}
       />
+      <TaskSelect taskTypes={taskTypes} change={changeActive} />
       <SectionHeading>Tasks: {taskTab.activeTask}</SectionHeading>
       <section className={styles.tasks_list}>
         {tasksData
@@ -86,7 +93,7 @@ const Tasks = () => {
             }
           )}
       </section>
-    </section>
+    </article>
   );
 };
 

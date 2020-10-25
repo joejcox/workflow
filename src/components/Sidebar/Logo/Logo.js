@@ -9,28 +9,22 @@ const Logo = ({ slim, menuIsOpen, click }) => {
     <section
       className={`${styles.sidebar_logo} ${menuIsOpen ? styles.open : ""}`}
     >
-      <Link to="/" onClick={click}>
-        {slim ? (
-          <>
-            <img
-              className={styles.sidebar_logo__slim}
-              src={LogoSlim}
-              alt="Webfactory logo"
-            />
-            <img
-              className={`${styles.sidebar_logo__wide} ${styles.hidden}`}
-              src={LogoImage}
-              alt="Webfactory Logo"
-            />
-          </>
-        ) : (
-          <img
-            className={styles.sidebar_logo__wide}
-            src={LogoImage}
-            alt="Webfactory Logo"
-          />
-        )}
-      </Link>
+      {slim ? (
+        <>
+          <Link to="/" onClick={click} className={styles.sidebar_logo__slim}>
+            <img src={LogoSlim} alt="Webfactory logo" />
+          </Link>
+          <Link
+            to="/"
+            onClick={click}
+            className={`${styles.sidebar_logo__wide} ${styles.hidden}`}
+          ></Link>
+        </>
+      ) : (
+        <Link to="/" onClick={click} className={styles.sidebar_logo__wide}>
+          <img src={LogoImage} alt="Webfactory Logo" />
+        </Link>
+      )}
     </section>
   );
 };
