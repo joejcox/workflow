@@ -12,7 +12,8 @@
 /build
 
 # misc
-todo.txt
+/psd
+todo.js
 .DS_Store
 .env.local
 .env.development.local
