@@ -90,6 +90,7 @@ const Tasks = () => {
               account_name,
               days,
               days: { days_due, overdue },
+              type,
             }) => {
               return (
                 <TaskItem
@@ -98,6 +99,7 @@ const Tasks = () => {
                   days={getDaysDue(days)}
                   overdue={overdue}
                   daysDue={days_due}
+                  type={type}
                 />
               );
             }

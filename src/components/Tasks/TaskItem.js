@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { MdModeEdit, MdDeleteForever } from "react-icons/md";
 import styles from "./TaskItem.module.scss";
 
-const TaskItem = ({ name, days, daysDue, overdue }) => {
+const TaskItem = ({ name, days, daysDue, overdue, type }) => {
   return (
     <article
       className={`
@@ -21,7 +21,7 @@ const TaskItem = ({ name, days, daysDue, overdue }) => {
           daysDue === 0 ? `${styles.task_days__today}` : ""
         } ${overdue ? `${styles.task_days__overdue}` : ""}`}
       >
-        {days}
+        <strong>{type}</strong>: {days}
       </span>
 
       <div className={styles.task_buttons}>
