@@ -10,6 +10,7 @@ import Main from "components/Main/Main";
 import Dashboard from "pages/Dashboard";
 import AddAccount from "pages/AddAccount";
 import ReportsPage from "pages/ReportsPage";
+import AllTasks from "pages/AllTasks";
 
 const App = () => {
   const [isOpen, setOpen] = useState(false);
@@ -45,6 +46,12 @@ const App = () => {
                     <title>Reports | Webfactory Workflow</title>
                   </Helmet>
                   <ReportsPage title="Reports" />
+                </Route>
+                <Route path="/user/all-tasks">
+                  <Helmet>
+                    <title>All Tasks | Webfactory Workflow</title>
+                  </Helmet>
+                  <AllTasks title="All Tasks" />
                 </Route>
               </Switch>
             </main>

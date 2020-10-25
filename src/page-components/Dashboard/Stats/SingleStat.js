@@ -23,7 +23,7 @@ const SingleStat = ({ name, value, children }) => {
   }
 
   return (
-    <div className={styles.stat_card}>
+    <article className={styles.stat_card}>
       {children ? (
         <>
           <span className={styles.stat_card__info_icon}>
@@ -33,16 +33,16 @@ const SingleStat = ({ name, value, children }) => {
         </>
       ) : null}
 
-      <div className={styles.stat_card__inner}>
-        <section className={styles.stat_card__wrapper}>
+      <section className={styles.stat_card__inner}>
+        <article className={styles.stat_card__wrapper}>
           <span className={styles.stat_card__icon}>{icon}</span>
-        </section>
-        <div className={styles.stat_card__content}>
+        </article>
+        <article className={styles.stat_card__content}>
           <h2 className={styles.stat_card__name}>{name}</h2>
           <p className={styles.stat_card__value}>{value}</p>
-        </div>
-      </div>
-    </div>
+        </article>
+      </section>
+    </article>
   );
 };
 

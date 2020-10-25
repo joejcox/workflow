@@ -1,0 +1,44 @@
+.task_tabs {
+  display: none;
+}
+
+@media screen and (min-width: 896px) {
+  .task_tabs {
+    display: block;
+    margin-top: 1rem;
+    position: relative;
+
+    .task_tabs__active_bar {
+      position: absolute;
+      border-radius: 5px;
+      content: "";
+      transition: 0.4s ease;
+      top: 0;
+      left: 0;
+      height: 42px;
+      z-index: -1;
+      background: #00b4ff;
+      border: 1px solid #0896d3;
+    }
+
+    .task_tab {
+      transition: 0.5s ease;
+      background: transparent;
+      border: 1px solid #0896d33d;
+      padding: 0.75rem 1.5rem;
+      cursor: pointer;
+      outline: none;
+      margin-right: 0.5rem;
+      border-radius: 5px;
+
+      &:hover {
+        border: 1px solid #0896d3;
+      }
+
+      &.task_tab__active {
+        background: transparent;
+        color: white;
+      }
+    }
+  }
+}

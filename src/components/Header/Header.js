@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Search from "./Search/Search";
 import Hamburger from "components/Header/Hamburger/Hamburger";
 import User from "./User/User";
@@ -10,11 +11,13 @@ const Header = ({ menuIsOpen, toggle }) => {
     <header className={styles.site_header}>
       <div className={`container ${styles.site_header__container}`}>
         <Hamburger menuIsOpen={menuIsOpen} toggle={toggle} />
-        <img
-          className={styles.site_header__logo}
-          src={Logo}
-          alt="Webfactory Logo"
-        />
+        <Link to="/">
+          <img
+            className={styles.site_header__logo}
+            src={Logo}
+            alt="Webfactory Logo"
+          />
+        </Link>
         <Search />
         <User />
       </div>

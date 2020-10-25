@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import SectionHeading from "components/SectionHeading/SectionHeading";
+import TaskTabs from "./TaskTabs";
 import TaskItem from "./TaskItem";
 import styles from "./Tasks.module.scss";
 import tasks_data from "data/tasks_data.json";
@@ -31,7 +33,7 @@ const Tasks = () => {
     setSize(false);
     const activeBar = document.querySelector(".active_bar");
     activeBar.style.width = `${e.target.offsetWidth}px`;
-    activeBar.style.transform = `translate(${e.target.offsetLeft}px, 0)`;
+    activeBar.style.transform = `translate(${e.target.offsetLeft}px, ${e.target.offsetTop}px)`;
   };
 
   const getDaysDue = (days) => {
@@ -50,26 +52,13 @@ const Tasks = () => {
   };
 
   return (
-    <>
-      <div className={styles.tasks}>
-        <div className={`active_bar ${styles.tasks__active}`}></div>
-        {taskTypes.map((taskType) => {
-          return (
-            <button
-              className={`${styles.task_tab} ${
-                taskType === taskTab.activeTask
-                  ? `${styles.task_tab__active} active`
-                  : ""
-              }`}
-              key={taskType}
-              onClick={(e) => setActive(e, taskType)}
-            >
-              {taskType}
-            </button>
-          );
-        })}
-      </div>
-      <h3 className={styles.task_heading}>Tasks: {taskTab.activeTask}</h3>
+    <section className="tasks">
+      <TaskTabs
+        taskTypes={taskTypes}
+        click={setActive}
+        activeTask={taskTab.activeTask}
+      />
+      <SectionHeading>Tasks: {taskTab.activeTask}</SectionHeading>
       <section className={styles.tasks_list}>
         {tasksData
           .sort((a, b) => a.days.days_due - b.days.days_due)
@@ -97,7 +86,7 @@ const Tasks = () => {
             }
           )}
       </section>
-    </>
+    </section>
   );
 };
 

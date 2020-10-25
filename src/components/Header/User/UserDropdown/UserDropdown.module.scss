@@ -11,6 +11,7 @@
   top: calc(100% + 0.7rem);
   right: 0;
   transform: translateY(10px);
+  z-index: 499;
 
   &.open {
     opacity: 1;
