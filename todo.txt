@@ -11,36 +11,7 @@ element.offsetWidth = width including borders
 element.offsetLeft = the page X
 
 
-Search by enter and take to a search page if there are more than 1 results in search dropdown
-Show latest 5 callers but navigate to a page which shows callers from past 24 hours.
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div className={styles.task_tabs}>
-        <div className={`active_bar ${styles.task_tabs__active_bar}`}></div>
-        {taskTypes.map((taskType) => {
-          return (
-            <button
-              className={`${styles.task_tab} ${
-                taskType === taskTab.activeTask
-                  ? `${styles.task_tab__active} active`
-                  : ""
-              }`}
-              key={taskType}
-              onClick={(e) => setActive(e, taskType)}
-            >
-              {taskType}
-            </button>
-          );
-        })}
-      </div>
+- Search by enter and take to a search page if there are more than 1 results in search dropdown
+- Show latest 5 callers but navigate to a page which shows callers from past 24 hours.
+- Change tasks to input on days when clicking edit. Delete when clicking delete.
+- On customer account pages have the edit functionality for their account data, create some validation checking to check for empty fields, invalid characters etc.
