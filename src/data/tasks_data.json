@@ -1,0 +1,74 @@
+[
+  {
+    "account_name": "Misty's Gym",
+    "customer_id": 1,
+    "days": {
+      "days_due": 1,
+      "overdue": false
+    },
+    "type": "Quotes"
+  },
+  {
+    "account_name": "Brock's Diner",
+    "customer_id": 2,
+    "days": {
+      "days_due": 0,
+      "overdue": false
+    },
+    "type": "Quotes"
+  },
+  {
+    "account_name": "Samurai Champloo's Fish Bar",
+    "customer_id": 3,
+    "days": {
+      "days_due": 5,
+      "overdue": false
+    },
+    "type": "SSL Setup"
+  },
+  {
+    "account_name": "Tiny Rebel",
+    "customer_id": 4,
+    "days": {
+      "days_due": 7,
+      "overdue": true
+    },
+    "type": "Domains"
+  },
+  {
+    "account_name": "Matalan",
+    "customer_id": 5,
+    "days": {
+      "days_due": 13,
+      "overdue": false
+    },
+    "type": "Other"
+  },
+  {
+    "account_name": "Lowes Soft Drinks",
+    "customer_id": 6,
+    "days": {
+      "days_due": 1,
+      "overdue": false
+    },
+    "type": "SEO Setup"
+  },
+  {
+    "account_name": "Snack 'n' Go",
+    "customer_id": 7,
+    "days": {
+      "days_due": 2,
+      "overdue": true
+    },
+    "type": "Quotes"
+  },
+  {
+    "account_name": "Jeronemo",
+    "customer_id": 8,
+    "days": {
+      "days_due": 5,
+      "overdue": false
+    },
+    "type": "Quotes"
+  }
+]
