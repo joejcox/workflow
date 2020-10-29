@@ -1,9 +1,12 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { removeTask } from "redux/tasks/tasksSlice";
 import { Link } from "react-router-dom";
 import { MdModeEdit, MdDeleteForever } from "react-icons/md";
 import styles from "./TaskItem.module.scss";
 
-const TaskItem = ({ name, days, daysDue, overdue, type }) => {
+const TaskItem = ({ id, name, days, daysDue, overdue, type }) => {
+  const dispatch = useDispatch();
   return (
     <article
       className={`
@@ -29,7 +32,10 @@ const TaskItem = ({ name, days, daysDue, overdue, type }) => {
           <MdModeEdit />
         </button>
 
-        <button className={`${styles.task_button} ${styles.delete}`}>
+        <button
+          className={`${styles.task_button} ${styles.delete}`}
+          onClick={() => dispatch(removeTask(id))}
+        >
           <MdDeleteForever />
         </button>
       </div>

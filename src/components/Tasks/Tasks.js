@@ -1,15 +1,17 @@
 import React, { useState, useEffect } from "react";
 import SectionHeading from "components/SectionHeading/SectionHeading";
+import { useSelector } from "react-redux";
+import { selectTasks } from "redux/tasks/tasksSlice";
 import TaskSelect from "./TaskSelect";
 import TaskTabs from "./TaskTabs";
 import TaskItem from "./TaskItem";
 import styles from "./Tasks.module.scss";
-import tasks_data from "data/tasks_data.json";
+// import tasks_data from "data/tasks_data.json";
 
 const Tasks = () => {
+  const tasksData = useSelector(selectTasks);
   const [taskTab, setTaskTab] = useState({ activeTask: "All" });
   const [size, setSize] = useState({ width: 65, left: 0 });
-  const [tasksData, setTasksData] = useState(tasks_data);
 
   const taskTypes = [
     "All",
@@ -56,19 +58,9 @@ const Tasks = () => {
     } else if (days_due > 1) {
       return `${days_due} days`;
     } else {
-      return "Error in switch statement";
+      return "Error getting days due";
     }
   };
-
-  // const getDaysDue = (days) => {
-  //   const { days_due, overdue } = days;
-  //   if (overdue === true) {
-  //     return Math.abs(days_due);
-  //   } else {
-  //     return days_due;
-  //   }
-  // };
-
   return (
     <article className="tasks">
       <TaskTabs
@@ -81,6 +73,7 @@ const Tasks = () => {
       <SectionHeading>Tasks: {taskTab.activeTask}</SectionHeading>
       <section className={styles.tasks_list}>
         {tasksData
+          .concat()
           .sort((a, b) => a.days.days_due - b.days.days_due)
           .filter((task) =>
             taskTab.activeTask === "All"
@@ -98,6 +91,7 @@ const Tasks = () => {
               return (
                 <TaskItem
                   key={customer_id}
+                  id={customer_id}
                   name={account_name}
                   days={getDaysDue(days)}
                   overdue={overdue}
