@@ -6,7 +6,6 @@ import TaskSelect from "./TaskSelect";
 import TaskTabs from "./TaskTabs";
 import TaskItem from "./TaskItem";
 import styles from "./Tasks.module.scss";
-// import tasks_data from "data/tasks_data.json";
 
 const Tasks = () => {
   const tasksData = useSelector(selectTasks);
@@ -72,35 +71,39 @@ const Tasks = () => {
       <TaskSelect taskTypes={taskTypes} change={changeActive} />
       <SectionHeading>Tasks: {taskTab.activeTask}</SectionHeading>
       <section className={styles.tasks_list}>
-        {tasksData
-          .concat()
-          .sort((a, b) => a.days.days_due - b.days.days_due)
-          .filter((task) =>
-            taskTab.activeTask === "All"
-              ? true
-              : task.type === taskTab.activeTask
-          )
-          .map(
-            ({
-              customer_id,
-              account_name,
-              days,
-              days: { days_due, overdue },
-              type,
-            }) => {
-              return (
-                <TaskItem
-                  key={customer_id}
-                  id={customer_id}
-                  name={account_name}
-                  days={getDaysDue(days)}
-                  overdue={overdue}
-                  daysDue={days_due}
-                  type={type}
-                />
-              );
-            }
-          )}
+        {tasksData.length > 0 ? (
+          tasksData
+            .concat()
+            .sort((a, b) => a.days.days_due - b.days.days_due)
+            .filter((task) =>
+              taskTab.activeTask === "All"
+                ? true
+                : task.type === taskTab.activeTask
+            )
+            .map(
+              ({
+                customer_id,
+                account_name,
+                days,
+                days: { days_due, overdue },
+                type,
+              }) => {
+                return (
+                  <TaskItem
+                    key={customer_id}
+                    id={customer_id}
+                    name={account_name}
+                    days={getDaysDue(days)}
+                    overdue={overdue}
+                    daysDue={days_due}
+                    type={type}
+                  />
+                );
+              }
+            )
+        ) : (
+          <h2>There are no tasks available to load</h2>
+        )}
       </section>
     </article>
   );

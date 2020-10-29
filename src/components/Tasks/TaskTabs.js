@@ -17,7 +17,10 @@ const TaskTabs = ({ taskTypes, click, activeTask, data }) => {
             key={type}
             onClick={(e) => click(e, type)}
           >
-            {type} <span className={styles.num_tasks}>{numTasks}</span>
+            {type}{" "}
+            {data.length > 0 ? (
+              <span className={styles.num_tasks}>{numTasks}</span>
+            ) : null}
           </button>
         );
       })}
