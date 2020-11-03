@@ -8,25 +8,25 @@ import { IoMdWarning } from "react-icons/io";
 import { CgLogOut } from "react-icons/cg";
 import SidebarLink from "../SidebarLink/SidebarLink";
 
-export const SidebarNavTop = ({ slim, toggle }) => {
+export const SidebarNavTop = () => {
   return (
     <section className="sidebar_navigation">
-      <SidebarLink text="Add Account" slim={slim} click={toggle}>
+      <SidebarLink text="Add Account">
         <HiUserAdd />
       </SidebarLink>
-      <SidebarLink text="Event Feed" slim={slim} click={toggle}>
+      <SidebarLink text="Event Feed">
         <BiRss />
       </SidebarLink>
-      <SidebarLink text="Reports" slim={slim} click={toggle}>
+      <SidebarLink text="Reports">
         <AiOutlineAreaChart />
       </SidebarLink>
-      <SidebarLink text="Big Screen" slim={slim} click={toggle}>
+      <SidebarLink text="Big Screen">
         <BiDesktop />
       </SidebarLink>
-      <SidebarLink text="Meetings" slim={slim} click={toggle}>
+      <SidebarLink text="Meetings">
         <GiRoundTable />
       </SidebarLink>
-      <SidebarLink text="Team Members" slim={slim} click={toggle}>
+      <SidebarLink text="Team Members">
         <TiGroup />
       </SidebarLink>
     </section>
@@ -36,10 +36,10 @@ export const SidebarNavTop = ({ slim, toggle }) => {
 export const SidebarNavBottom = ({ slim, toggle }) => {
   return (
     <section className="sidebar_navigation">
-      <SidebarLink text="Report Issue" slim={slim} click={toggle}>
+      <SidebarLink text="Report Issue">
         <IoMdWarning />
       </SidebarLink>
-      <SidebarLink text="Log Out" slim={slim} click={toggle}>
+      <SidebarLink text="Log Out">
         <CgLogOut />
       </SidebarLink>
     </section>
