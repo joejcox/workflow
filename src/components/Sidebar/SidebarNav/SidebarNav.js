@@ -33,7 +33,7 @@ export const SidebarNavTop = () => {
   );
 };
 
-export const SidebarNavBottom = ({ slim, toggle }) => {
+export const SidebarNavBottom = () => {
   return (
     <section className="sidebar_navigation">
       <SidebarLink text="Report Issue">
