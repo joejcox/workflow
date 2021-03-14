@@ -2,7 +2,7 @@ import React from "react";
 import { FcBusinessman } from "react-icons/fc";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import styles from "./UserAvatar.module.scss";
-import avatar from "assets/images/avatar.webp";
+import avatar from "assets/images/userImage.png";
 
 const UserAvatar = ({ toggleOpen }) => {
   return (
