@@ -2,8 +2,8 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { menuIsOpen, menuIsSlim, toggleMenu } from "redux/menu/menuSlice";
 import { Link } from "react-router-dom";
-import LogoImage from "assets/images/wflogo.webp";
-import LogoSlim from "assets/images/wfsmall.webp";
+import LogoImage from "assets/images/technodelogo.png";
+import LogoSlim from "assets/images/technodelogosmall.png";
 import styles from "./Logo.module.scss";
 
 const Logo = () => {
