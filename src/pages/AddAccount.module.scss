@@ -1,0 +1,42 @@
+.customer_list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  margin: 1rem 0;
+  padding: 0 1rem;
+}
+
+.customer {
+  width: 33.333%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  border-right: 5px solid mediumslateblue;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+
+  h4 {
+    color: mediumslateblue;
+    margin-bottom: 0.5rem;
+    text-transform: capitalize;
+
+    &.address {
+      font-size: 0.9rem;
+      font-weight: 400;
+    }
+  }
+
+  section {
+    padding-bottom: 1rem;
+
+    &:first-child {
+      flex: 1;
+      margin-bottom: 1rem;
+    }
+
+    &:last-child {
+      flex: 2;
+    }
+  }
+}
